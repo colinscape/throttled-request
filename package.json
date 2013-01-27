@@ -1,0 +1,28 @@
+{
+  "name": "throttled-request",
+  "version": "0.0.0",
+  "description": "Throttled version of request.",
+  "main": "lib/throttled-request.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "coffee -o lib -c src/*.coffee; cat ./misc/header.js ./lib/elongate.js > ./lib/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://git@github.com:colinscape/throttoed-request.git"
+  },
+  "keywords": [
+    "request",
+    "throttled"
+  ],
+  "author": "Colin Ross <colin@colinscape.com> (http://colinscape.com)",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "68fbd1764ac545e129df0dcc65a1efca1d04c8a4",
+  "dependencies": {
+    "request": "~2.12.0"
+  }
+}

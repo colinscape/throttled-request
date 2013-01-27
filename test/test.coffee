@@ -1,6 +1,6 @@
 #!/usr/bin/env coffee
 
-request = require './throttled-request'
+trequest = require '../src/throttled-request'
 
 urls = [
   'http://www.google.com/'
@@ -8,6 +8,5 @@ urls = [
   'http://www.bing.com/'
   'http://www.lycos.co.uk/'
 ]
-
-request.requestMany urls, (err, resp, body) ->
-  console.log resp.request.uri.hostname
+trequest.requestMany urls, (err, response, body) ->
+  console.log "#{response.request.host} : #{body.length}"
